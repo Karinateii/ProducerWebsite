@@ -1,0 +1,141 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>W RECORDS</title>
+      <!-- Link to your CSS file for styling -->
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+      <!-- <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Monserrat:wght@700;800;900&display=swap" rel="stylesheet"> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+  </head>
+  <body>
+     <!-- Navigation Section -->
+    <div class="hero">
+      <nav>
+        <a href="index.html">
+          <h2 class="logo"><span></span>
+            <img src="media/LOGO 2.jpg" alt="Wilson Muzic Logo">
+          </h2>
+        </a>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="pictures.html">Pictures</a></li>
+              <li><a href="products.html">Services</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="tel:+123456789"><i class="fas fa-phone"></i></a>
+          </div>
+      </nav>
+  </div>
+
+  <section id="home" class="home-section">
+    <div class="intro">
+        <h1>WILSON MUZIC</h1>
+        <p>Your source for music production excellence.</p>
+        <a href="#" id="playButton" class="cta-button">
+            <i id="playIcon" class="fas fa-play"></i>
+            <i id="pauseIcon" class="fas fa-pause" style="display: none;"></i>
+        </a>
+    </div>
+</section>
+
+
+  <!-- Hidden Audio Player -->
+  <div id="audioPlayerContainer" style="position: fixed; bottom: 10px; right: 10px; display: none;">
+    <audio id="audioPlayer" controls style="width: 300px;">
+      <source src="music/Johnny_Drille_-_Loving_Is_Harder.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+
+
+
+    <section id="services" class="services-section">
+      <h1>Services Offered</h1>
+      <div class="services-box">
+        <div class="service">
+          <img src="pictures2/pexels-caleb-oquendo-4889278.jpg" alt="">
+          <h2>Music Direction</h2>
+          <p>With over 11 years of experience, our company specializes in music production that exceeds your expectations. We bring your musical ideas to life with top-notch production techniques</p>
+          <a href="products.html">Learn More</a>
+        </div>
+
+        <div class="service">
+          <img src="pictures/pexels-dmitry-demidov-3784221.jpg" alt="">
+          <h2>Project Management</h2>
+          <p>Our expertise in project management ensures that every aspect of your music and audiovisual projects is handled with precision and efficiency.</p>
+          <a href="products.html">Learn More</a>
+        </div>
+
+        <div class="service">
+          <img src="pictures/pexels-rdne-stock-project-8198567.jpg" alt="">
+          <h2>Audio VIsual Production</h2>
+          <p>We offer comprehensive audiovisual production services that encompass filming, editing, and post-production to deliver captivating visual content.</p>
+          <a href="products.html">Learn More</a>
+        </div>
+
+        <div class="service">
+          <img src="pictures2/pexels-hendrik-b-744318.jpg" alt="">
+          <h2>Post Production Engineering</h2>
+          <p>Our post-production engineering team fine-tunes your audio and video materials to perfection, guaranteeing a polished final product.</p>
+          <a href="products.html">Learn More</a>
+        </div>
+        
+        
+        <div class="service">
+          <img src="pictures/pexels-tima-miroshnichenko-6670757.jpg" alt="">
+          <h2>Film Scoring</h2>
+          <p> Elevate your film projects with our film scoring services. We compose and produce original scores that enhance the storytelling and emotional impact of your films.</p>
+          <a href="products.html">Learn More</a>
+        </div>
+      </div>
+      <!-- Add more service elements for additional services -->
+  </section>
+
+      <!-- Footer section (optional) -->
+      <footer>
+          <p>&copy; 2023 WIlson Muzic</p>
+      </footer>
+
+      <!-- <script src="script.js"></script> -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const playButton = document.getElementById("playButton");
+        const audioPlayer = document.getElementById("audioPlayer");
+        const playIcon = document.getElementById("playIcon");
+        const pauseIcon = document.getElementById("pauseIcon");
+
+        playButton.addEventListener("click", function () {
+        // Toggle audio player visibility
+        audioPlayer.style.display = audioPlayer.style.display === "none" ? "block" : "none";
+
+        // Toggle play and pause icons
+        if (audioPlayer.style.display === "block") {
+            audioPlayer.play();
+            playIcon.style.display = "none";
+            pauseIcon.style.display = "inline"; // Show the pause icon
+        } else {
+            audioPlayer.pause();
+            playIcon.style.display = "inline"; // Show the play icon
+            pauseIcon.style.display = "none";
+        }
+    });
+});
+
+      </script>
+      
+      <script src="slideshow.js"></script>
+
+  </body>
+  </html>

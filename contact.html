@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Producer Website</title>
+  <!-- Link to your CSS file for styling -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+</head>
+<body>
+    
+    <!-- Navigation Section -->
+    <div class="hero">
+      <nav>
+        <a href="index.html">
+          <h2 class="logo"><span></span>
+            <img src="media/LOGO 2.jpg" alt="Wilson Muzic Logo">
+          </h2>
+        </a>>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="pictures.html">Pictures</a></li>
+              <li><a href="products.html">Services</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/yourpage" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="tel:+123456789"><i class="fas fa-phone"></i></a>
+          </div>
+      </nav>
+  </div>
+
+
+  <!-- Homepage Content -->    
+<section id="home" class="home-section">
+  <div class="intro">
+    <h1>WILSON MUZIC</h1>
+    <p>Your source for music production excellence.</p>
+  </div>
+</section>
+
+    
+
+    <div class="container">
+      <form id="contact-form">
+        <h1>Contact Us Form</h1>
+        <input type="text" id="firstname" placeholder="First Name" required>
+        <input type="text" id="lastname" placeholder="Last Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="mobile" placeholder="Mobile" required>
+        <h4>Type your Message Here...</h4>
+        <textarea id="message" required></textarea>
+        <input type="submit" value="Submit" id="button">
+      </form>
+    </div>
+
+    <!-- Success Message (initially hidden) -->
+       <div id="success-message" class="success-message" style="display: none;">
+          Message sent successfully!
+      </div> 
+
+    <footer>
+      <p>&copy; 2023 WIlson Muzic</p>
+    </footer>
+
+    <!-- Add a script tag to link to your JavaScript file as needed -->
+    <script src="contact.js"></script>
+</body>
+</html>

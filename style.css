@@ -1,0 +1,744 @@
+/* styles.css */
+
+/* Reset some default browser styles */
+body, h1, h2, h3, ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background color to the body */
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('pictures/pexels-ashutosh-sonwani-1762578.jpg');
+  background-size: cover;
+  background-position: center; 
+  font-family: Arial, sans-serif;
+}
+
+/* Style the navigation bar */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-top: 20px;
+}
+
+.logo {
+  color: white;
+  font-size: 28px;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: blue;
+  transition: 0.3s;
+}
+
+/* Add spacing between social media icons */
+.social-icons a {
+  margin-right: 15px; /* Adjust the spacing as needed */
+}
+
+/* Style the social media icons */
+.social-icons i {
+  font-size: 20px; /* Adjust the icon size as needed */
+  color: white; /* Set the icon color */
+  transition: 0.3s;
+}
+
+/* Change the icon color on hover */
+.social-icons i:hover {
+  color: blue; /* Set the hover color */
+}
+
+/* Style the logo image */
+.logo img {
+  width: 125px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add margin to separate it from the navigation links */
+}
+
+
+/* Style the audio player container */
+#audioPlayerContainer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+  background-color: #fff; /* Set the background color of the popup */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+/* Style the audio player */
+#audioPlayer {
+  width: 100%;
+}
+
+/* Style the "Listen Now" button in the popup */
+#playButton {
+  color: white;
+  cursor: pointer;
+}
+
+/* CSS for the "Home" section with a background image */
+
+.home-section {
+  background-size: cover; /* Cover the entire section with the background image */
+  background-position: center; /* Center the background image */
+  color: #fff; /* Text color on top of the background image */
+  text-align: center;
+  padding: 100px 0; /* Add padding to the top and bottom of the section content */
+  margin-top: 100px;
+  margin-bottom: auto;
+}
+
+.home-section h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: ;
+  margin-top: -75px;
+}
+
+.home-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* CSS for the services section */
+.services-section {
+  margin-top: -50px;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.services-section h1 {
+  margin-bottom: 10px;
+  color: white;
+  font-size: 30px;
+}
+
+
+/* Style the services box */
+.services-box {
+  padding: 20px; /* Add some padding to the box */
+  border-radius: 20px; /* Rounded corners for the box with a slight curve */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow for the box */
+  display: flex; /* Inline-block to keep it centered */
+  align-items: center;
+  justify-content: center;
+  background-size: 100% 100%; /* Cover the entire box with the background image */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-color: #90c0fa00;
+  color: #fff; /* Text color for better contrast */
+}
+
+/* Set a fixed height for the service boxes */
+.service {
+  display: inline-block;
+  /* width: calc(25% - 40px); Adjust width as needed for the number of services per row */
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 390px; /* Remove fixed height to allow content to expand */
+  box-sizing: border-box; /* Include padding and border in the height calculation */
+  text-align: center; /* Center-align content */
+}
+
+/* Set a specific height for the service images to fit within the boxes */
+.service img {
+  max-width: 100%;
+  height: auto; /* Allow images to maintain their aspect ratio */
+  margin-bottom: 20px;
+}
+
+/* Customize styling for service titles and descriptions as needed */
+.service h2 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 20px; /* Adjust font size as needed */
+}
+
+.service p {
+  font-size: 16px; /* Adjust font size as needed */
+  color: #666;
+}
+
+
+* {box-sizing:border-box}
+
+{
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+
+/* CSS for the "About Us" section with class "content-section" */
+.content-section {
+  background-color: #f8f8f8; /* Background color for the section */
+  padding: 40px 0; /* Add padding to the top and bottom */
+  text-align: center;
+}
+
+.content-section h2 {
+  font-size: 24px; /* Adjust the font size as needed */
+  color: #007bff; /* Text color */
+  margin-bottom: 20px; /* Spacing at the bottom of h2 elements */
+}
+
+.content-section p {
+  font-size: 18px; /* Adjust the font size as needed for improved readability */
+  color: #444; /* Slightly darker text color for better contrast */
+  line-height: 1.5; /* Improved line spacing for readability */
+  margin-bottom: 20px; /* Spacing at the bottom of paragraphs */
+}
+
+.content-section .about-image img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px; /* Spacing above the image */
+  margin-bottom: 20px; /* Spacing below the image */
+  border-radius: 10px; /* Add rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the image */
+}
+
+
+/* Style the footer (optional) */
+footer {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  
+  padding: 15px 0; /* Add padding as needed */
+  z-index: 100; /* Ensure it's above other content */
+}
+
+/* Add CSS styles for the contact form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* CSS for the success message */
+.success-message {
+  display: none; /* Initially hidden */
+  background-color: #4CAF50;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* CSS for the About Us page */
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  box-sizing:border-box;
+}
+
+.about{
+  margin-top: 100px;
+  width: 100%;
+  padding:78px 0px;
+  background-color: #191919;
+  justify-content: center;
+  align-items: center;
+}
+
+.about img{
+  height:auto;
+  width: 420px;
+}
+
+.about.text{
+  width:550px;
+}
+
+.about-text h1{
+  color: white;
+  font-size:60px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+
+.about-text h5{
+  color: white;
+  font-size:25px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+span{
+  color: blue
+}
+
+.about-text p{
+  color: #fcfc;
+  letter-spacing:1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 45px;
+}
+
+button{
+  background:blue;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: .4s;
+}
+
+button:hover{
+  background: transparent;
+  border: 2-x solid blue;
+  cursor:pointer;
+}
+
+.main{
+  width:1130px;
+  max: width 95%;
+  margin:0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.main img{
+  margin-right: 50px;
+}
+
+/* CSS for the Products and Services page */
+.title h1{
+  text-align: center;
+  padding-top: 50px;
+  font-size: 42px;
+  color: white;
+}
+
+.title h1::after{
+  content:"";
+  height: 4px;
+  width: 230px;
+  background-color: #000;
+  display: block;
+  margin: auto;
+}
+
+.services{
+  width: 85%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 75px auto;
+  text-align: center;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px 20px;
+  padding: 20px 20px;
+  background-color: #efefef;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card:hover{
+  background-color: #b8d4de;
+  transition: 0.4s ease;
+}
+
+.card .icon{
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.card h2{
+  font-size: 28px;
+  color: #c94f4f;
+  margin-bottom: 20px;
+}
+
+.card p{
+  font-size: 17px;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  color: black;
+}
+
+.button {
+  font-size: 15px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #2c677c;;
+  padding: 8px 12px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+
+}
+
+.button:hover{
+  background-color: #c94f4f;
+}
+
+@media screen (max-width: 940px){
+  .services{
+    display: flex;
+    flex-direction:column;
+  }
+}
+
+/* Client review Css */
+.testimonials{
+  padding: 40px 0;
+  background:#b8d4dea2;
+  color: #434343;
+  text-align: center;
+}
+.inner{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.border{
+  width: 160px;
+  height: 5px;
+  background: #6ab04c;
+  margin: 26px auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col{
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.testimonial{
+  background: #fff;
+  padding: 30px;
+}
+.testimonial img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name{
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.stars{
+  color: #6ab04c;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:960px) {
+.col{
+  flex: 100%;
+  max-width: 80%;
+}
+}
+
+@media screen and (max-width:600px) {
+.col{
+  flex: 100%;
+  max-width: 100%;
+}
+}
+
+/* Additional styling as needed */
+/* CSS for the Pictures page */
+.slider-wrapper .image-list{
+  display: grid;
+  gap: 18px;
+  font-size: 0;
+  overflow-x: auto;
+  grid-template-columns: repeat(10, 1fr)
+}
+
+.slider-wrapper .image-list .image-item{
+  width: 325px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.container2{
+  max-width: 1200px;
+  width: 95%;
+}
+
+/* CSS for contact form and success message */
+
+.container{
+  min-height 100v;
+  background: rgba(255, 255, 255, 0.404);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container form{
+  width: 670px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  flex-wrap: wrap;
+}
+
+.container form h1{
+  color: #fff;
+  font-weight: 500;
+  margin-top: 20px;
+  width: 500px;
+  text-align: center;
+}
+
+.container form input{
+  width: 290px;
+  height: 40px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  margin-bottom: 10px;
+  background: none;
+  border-bottom: 2px solid #fff;
+}
+
+.container form input::placeholder{
+  color: #ddd;
+}
+
+.container form #lastname,
+.container form #mobile{
+  margin-left: 20px;
+
+}
+
+.container form h4{
+  color: #fff;
+  font-weight: 300;
+  width: 600px;
+  margin-top: 20px;
+}
+
+.container form textarea{
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-weight: 200;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+  min-width: 600px;
+  max-width: 600px;
+  min-height: 80px;
+  max-height: 80px;
+}
+
+.container form #button{
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #333;
+  width: 100px;
+  padding: 0;
+  margin-right: 500px;
+  margin-bottom: 30px;
+  transition: 0.3s;
+  
+}
+
+.container form #button:hover{
+  opacity:0.7;
+}
+
+.success-message {
+  background-color: #5cb85c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 20px;
+  display: none;
+} 
